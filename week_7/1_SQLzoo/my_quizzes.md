@@ -5,7 +5,7 @@
 
 
 ### My Quiz Results:
-<img src ="\unit1_projects\images\sqlzoo_quiz.jpg"/>
+<img src ="\phase_0_unit_3\week_7\imgs\sqlzoo_quiz.jpg"/>
 
 
 
