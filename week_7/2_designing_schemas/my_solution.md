@@ -21,7 +21,7 @@
 
 
 ## Release 4: Design your own Schema 
-Description of what you're modeling: See reflection, I goofed a bit.
+Description of what you're modeling: See reflection, I goofed a bit, But this is a Law Firm's Case Database
 
 <img src ="https://raw.githubusercontent.com/mlear/phase_0_unit_3/master/week_7/imgs/release4.jpg">
 
