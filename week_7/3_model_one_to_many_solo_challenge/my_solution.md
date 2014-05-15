@@ -26,7 +26,9 @@ The relationship between `users` and `tweets` is: <!-- because... -->  Its a one
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
 
+```javascript
 <script src="https://gist.github.com/mlear/38bf65098f74e5b50983.js"></script>
+```
 
 ## Release 5: Reflection
 <!-- Be sure to add your reflection here!!! -->  I was a little confused here when we got to the SQL access statements.  The third one asks for all tweets associated with a user handle.  Does this mean all tweets "created" by a user handle?  Or all created tweets, and tweets were the user is mentioned?  So, I created another schema and completely confused myself building a new table for the mentions and trying to connect everything up.  I'll have to return to that later, but below is what I have come up with so far.  (I know its wrong.)
