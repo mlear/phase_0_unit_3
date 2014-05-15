@@ -26,8 +26,16 @@ The relationship between `users` and `tweets` is: <!-- because... -->  Its a one
 ## Release 4: SQL Statements
 <!-- Include your SQL Statements. How can you make markdown files show blocks of code? -->
 
-```javascript
-<script src="https://gist.github.com/mlear/38bf65098f74e5b50983.js"></script>
+```sql
+
+SELECT message FROM tweet WHERE user_id = (user_id)
+
+SELECT message FROM tweet WHERE user_id = (user_id) and created_at BETWEEN '2014-05-07' and '2014-05-14'
+
+SELECT message FROM user JOIN tweet ON (id=user_id) where user_handle=(user_handle)
+
+SELECT user_handle from user JOIN tweet on (id=user_id) WHERE tweet_id = (tweet_id)
+
 ```
 
 ## Release 5: Reflection
