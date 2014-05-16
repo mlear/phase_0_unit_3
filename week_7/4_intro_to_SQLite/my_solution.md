@@ -43,6 +43,7 @@ sqlite>
 
 ## Release 3: Add a column
 
+```sql
 sqlite> alter table users
    ...> add nicknames varchar(64) NOT NULL DEFAULT('no nickname');
 sqlite> .schema
@@ -82,6 +83,7 @@ CREATE TABLE users (
   updated_at DATETIME NOT NULL
 , nicknames varchar(64) NOT NULL DEFAULT('no nickname'));
 sqlite>
+```
 
 ## Release 4: Change a value
 
