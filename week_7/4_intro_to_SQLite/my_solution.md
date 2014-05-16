@@ -2,6 +2,7 @@
 
 ## Release 0: Create a dummy database
 
+```sql
 C:\>sqlite3 dummy.db
 SQLite version 3.8.2 2013-12-06 14:53:30
 Enter ".help" for instructions
@@ -15,9 +16,11 @@ sqlite> CREATE TABLE users (
    ...>   updated_at DATETIME NOT NULL
    ...> );
 sqlite>
+```
 
 ## Release 1: Insert Data 
 
+```sql
 sqlite> INSERT INTO users
    ...> (first_name, last_name, email, created_at, updated_at)
    ...> VALUES
@@ -27,9 +30,11 @@ Error: UNIQUE constraint failed: users.email
 sqlite> SELECT * FROM users;
 1|Kimmey|Lin|kimmy@devbootcamp.com|2014-05-15 01:43:36|2014-05-15 01:43:36
 sqlite>
+```
 
 ## Release 2: Multi-line commands
 
+```sql
 sqlite> INSERT INTO users
    ...> (first_name, last_name, email, created_at, updated_at)
    ...> VALUES
@@ -40,6 +45,7 @@ sqlite> select * from users;
 1|Kimmey|Lin|kimmy@devbootcamp.com|2014-05-16 00:23:54|2014-05-16 00:23:54
 2|Martin|Lear|m.lear09@gmail.com|2014-05-16 00:25:06|2014-05-16 00:25:06
 sqlite>
+```
 
 ## Release 3: Add a column
 
@@ -87,6 +93,7 @@ sqlite>
 
 ## Release 4: Change a value
 
+```sql
 sqlite> update users set first_name='Kimmy', nicknames='Ninja Coder', updated_at
  DATETIME('now') where id=1;
 Error: near "DATETIME": syntax error
@@ -99,6 +106,7 @@ Coder
 2|Martin|Lear|mlear@devbootcamp.com|2014-05-16 01:38:33|2014-05-16 01:38:33|Goza
 r
 sqlite>
+```
 
 ## Release 5: Reflect
 
