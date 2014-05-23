@@ -26,30 +26,75 @@ var scores = [ [80, 70, 70, 100],
 // __________________________________________
 // Write your code below.
 
+// function average(array_of_numbers) {
+//   var ave = 0;
+//   for (var x = 0; x < array_of_numbers.length; x++) { 
+//     ave += array_of_numbers[x]; 
+//   }
+//   ave = ave/(array_of_numbers.length)
+//   return(ave)
+// }
 
+// var gradebook = {}
 
+// students.forEach(function(name) {
+//   gradebook[name] = {}
+// })
 
+// gradebook.Joseph.testScores = scores[0]
+// gradebook.Susan.testScores = scores[1]
+// gradebook.William.testScores = scores[2]
+// gradebook.Elizabeth.testScores = scores[3]
+
+// gradebook.addScore = function(name, score) {
+//   gradebook[name].testScores.push(score)
+// }
+
+// gradebook.getAverage = function(name) {
+//   return average(gradebook[name].testScores)
+// }
 
 
 // __________________________________________
 // Refactored Solution
 
+function average(array_of_numbers) {
+  var ave = 0;
+  for (var x = 0; x < array_of_numbers.length; x++) { 
+    ave += array_of_numbers[x]; 
+  }
+  return(ave/(array_of_numbers.length))  
+}
 
+var gradebook = {}
 
+students.forEach(function(name) {
+  gradebook[name] = {}
+})
 
+count=0
+students.forEach(function(name) {
+  gradebook[name].testScores = scores[count];
+  count++;
+})
 
+gradebook.addScore = function(name, score) {
+  gradebook[name].testScores.push(score)
+}
 
+gradebook.getAverage = function(name) {
+  return average(gradebook[name].testScores)
+}
 
 
 // __________________________________________
 // Reflect
 
-
-
-
-
-
-
+// so I got completely frustrated at one point with assigning the testScores to the names, I couldn't figure out what the heck
+// I was doing wrong, and gave up for a night.  Came back the next day, assigned all the testScores manually and moved on.
+// As soon as I did the addScore function, I realized that I was trying to add the testScores by calling on gradebook.name.testScores
+// (which you can't do) instead of gradebook[name].testScores.  Won't make that mistake again!  I still feel like I can refactor
+// this some more, the average function just looks clunky to me and I feel like I can make it cleaner.  
 
 
 // __________________________________________
