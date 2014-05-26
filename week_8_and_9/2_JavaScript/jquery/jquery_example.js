@@ -2,6 +2,7 @@ $(document).ready(function(){
  
 //RELEASE 0: 
   //Link this script and the jQuery library to the jquery_example.html file and analyze what this code does. 
+  //I think something might be missing here, but I worked on this with Zach P.
  
 $('body').css({'background-color': 'pink'});
  
