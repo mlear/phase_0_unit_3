@@ -1,6 +1,6 @@
 // U3.W8-9: Gradebook from Names and Scores
 
-// I worked on this challenge [by myself, with:]
+// I worked on this challenge by myself.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -65,21 +65,87 @@ var officers = {
 
 // Pseudocode
 
+// Iterate over the votes to populate voteCount
+// sort voteCount - will have to make an array as you can't sort an object
+// assign officers based off the sorted voteCount
+
 
 // __________________________________________
 // Initial Solution
 
+// for (var key in votes) {
+//   var president = votes[key].president;
 
+//   if (voteCount.president[president] === undefined) {
+//     voteCount.president[president] = 1;
+//   }
+//   else {
+//     voteCount.president[president] += 1;
+//   }
 
+//   var vicepres = votes[key].vicePresident;
 
+//   if (voteCount.vicePresident[vicepres] === undefined) {
+//     voteCount.vicePresident[vicepres] = 1;
+//   }
+//   else {
+//     voteCount.vicePresident[vicepres] += 1;
+//   }
+
+//   var sec = votes[key].secretary;
+
+//   if (voteCount.secretary[sec] === undefined) {
+//     voteCount.secretary[sec] = 1;
+//   }
+//   else {
+//     voteCount.secretary[sec] +=1;
+//   }
+
+//   var treas = votes[key].treasurer;
+
+//   if (voteCount.treasurer[treas] === undefined) {
+//     voteCount.treasurer[treas] = 1;
+//   }
+//   else {
+//     voteCount.treasurer[treas] +=1;
+//   }
+// }
+
+// for (var title in voteCount){
+//   sortedArray = [];
+//   for (var candidate in voteCount[title]){
+//     sortedArray.push([candidate, voteCount[title][candidate]]);
+//     sortedArray.sort(function(a, b) {return b[1] - a[1]});
+//   }
+//   console.log(sortedArray)
+//   officers[title] = sortedArray[0][0]
+// }
 
 
 
 // __________________________________________
 // Refactored Solution
 
+for (var key in votes) {
+  for (var office in votes[key]) {
+    var choice = votes[key][office]
+    if (voteCount[office][choice] === undefined) {
+    voteCount[office][choice] = 1;
+    }
+    else {
+    voteCount[office][choice] += 1;
+    }
+  }
+}
 
-
+for (var title in voteCount){
+  sortedArray = [];
+  for (var candidate in voteCount[title]){
+    sortedArray.push([candidate, voteCount[title][candidate]]);
+    sortedArray.sort(function(a, b) {return b[1] - a[1]});
+  }
+  officers[title] = sortedArray[0][0]
+}
 
 
 
@@ -87,7 +153,13 @@ var officers = {
 // Reflection
 
 
+// Whew... That took me some time.  I just have not had enough practice with JS yet, and the syntax still confuses me.
+// I will have to come back to the refactor on this one once I am sure I have time to complete everything else.  The sort
+// issue here really had me frustrated.  I had forgotten that I was sorting a nested array and had to call the sort on the
+// actual vote total that I had set in the array.. arggggg.  I was getting the hang of the syntex when I got down to setting
+// up the arrays to be sorted, so I should be able to refactor the top to be more dry.
 
+// UPDATE:  Was able to refactor, much better.
 
 
 
