@@ -1,0 +1,1 @@
+<img src="http://i60.tinypic.com/idyemo.jpg">
